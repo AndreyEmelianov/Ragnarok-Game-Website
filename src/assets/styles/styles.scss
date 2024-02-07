@@ -33,6 +33,10 @@
   &-dual-controller {
     margin-top: 64px;
   }
+
+  &-about {
+    margin-top: 90px;
+  }
 }
 
 .header {
@@ -364,6 +368,60 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.video {
+  position: relative;
+  margin-top: 32px;
+  transition: transform 0.5s;
+  transform: scale(1);
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  &-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+
+    &.hidden {
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 50px;
+    line-height: 39px;
+    font-weight: 500;
+    color: $white;
+  }
+
+  &-btn {
+    display: inline-block;
+    background: $dark;
+    border-radius: 6px;
+    margin: 28px auto 0 auto;
+    padding: 9px 26px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $white;
+    cursor: pointer;
+    transition: background 0.25s;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #525c67;
     }
   }
 }
